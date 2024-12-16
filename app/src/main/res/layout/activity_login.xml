@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/person_icon"
+            android:contentDescription="person_icon"
+            android:src="@drawable/baseline_account_box_24"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/android_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID: android"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/unlock_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="unlock login icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/unlock_svgrepo_com"
+            tools:ignore="HardcodedText"
+            tools:src="@drawable/unlock_svgrepo_com" />
+
+        <ProgressBar
+            android:id="@+id/progress_circle"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@android:color/black"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</FrameLayout>

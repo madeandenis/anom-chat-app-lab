@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+
+    <LinearLayout
+        android:id="@+id/group_chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingStart="6dp"
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/toolbar_back_button"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back to menu button"
+            android:paddingVertical="18dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_left_svgrepo_com"
+            app:tint="@color/light_black"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/toolbar_group_image"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Toolbar group image"
+            android:padding="8dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/group_svgrepo_com"
+            app:tint="@color/light_black"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/toolbar_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="Group chat"
+            android:textColor="@color/light_black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_messages"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/group_chat_toolbar"
+        android:layout_above="@id/message_input_layout"
+        android:overScrollMode="never"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:id="@+id/message_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:elevation="50dp">
+
+        <EditText
+            android:id="@+id/edit_text_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="Send anon...."
+            android:hint="Message..."
+            android:padding="12dp"
+            android:background="@drawable/input_field_background"
+            android:textColor="@color/black"
+            android:textColorHint="#7c7c7c"
+            android:maxLines="3"
+            android:inputType="textMultiLine"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/button_send"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/rounded_send_button_bg"
+            android:src="@drawable/send_icon"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            android:contentDescription="Send Message"
+            app:tint="@color/white"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</RelativeLayout>

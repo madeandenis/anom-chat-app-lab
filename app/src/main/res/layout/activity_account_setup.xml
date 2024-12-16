@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/person_icon"
+            android:contentDescription="person_icon"
+            android:src="@drawable/baseline_account_box_24"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/username_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textSize="22sp"
+            android:fontFamily="monospace"
+            android:textColor="@color/black"
+            android:layout_marginBottom="100dp"
+            tools:ignore="HardcodedText" />
+
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:hint="Set up your username"
+            android:padding="12dp"
+            android:inputType="text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_button"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:text="Continue"
+            android:backgroundTint="@color/black"
+            android:padding="20sp"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/linear_progress"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:trackColor="#fef7ff"
+            app:indicatorColor="@color/black"
+            app:trackThickness="12sp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

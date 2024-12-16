@@ -1,0 +1,63 @@
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:gravity="start"
+android:padding="8dp">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:layout_marginStart="6dp">
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Message sender icon"
+        android:scaleType="centerInside"
+        android:src="@drawable/group_svgrepo_com"
+        app:tint="@color/light_black"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/message_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Sender"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/light_black"
+        tools:ignore="HardcodedText" />
+</LinearLayout>
+
+<TextView
+    android:id="@+id/message_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Message sample"
+    android:textSize="13sp"
+    android:background="@drawable/sent_message_bg"
+    android:padding="12dp"
+    android:textColor="@color/black"
+    tools:ignore="HardcodedText" />
+
+<TextView
+    android:id="@+id/message_timestamp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginStart="6dp"
+    android:text="12:30"
+    android:textSize="10sp"
+    android:textColor="@color/light_black"
+    tools:ignore="HardcodedText,SmallSp" />
+
+</LinearLayout>
